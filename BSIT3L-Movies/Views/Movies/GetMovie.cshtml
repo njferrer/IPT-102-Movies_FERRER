@@ -1,17 +1,101 @@
 ﻿@model BSIT3L_Movies.Models.MovieViewModel
 
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Movie</title>
+    <title>Barbie Movie</title>
+    <style>
+        /* Barbie-themed styling */
+        body {
+            background-color: #ffc0cb; /* Barbie Pink */
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ff69b4; /* Hot Pink */
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav {
+            text-align: center;
+            background-color: #ff69b4; /* Hot Pink */
+            padding: 10px;
+        }
+
+            nav a {
+                text-decoration: none;
+                color: white;
+                padding: 10px 20px;
+            }
+
+                nav a:hover {
+                    background-color: #f94d8e; /* Lighter pink on hover */
+                }
+
+        h1 {
+            font-size: 36px;
+            color: #ff69b4;
+        }
+
+        main {
+            text-align: left;
+            padding: 20px;
+            background-color: white;
+            border: 2px solid #ff69b4; /* Hot Pink border */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            width: 900px;
+            margin: 0 auto;
+            flex-direction: row-reverse;
+            align-content: center;
+        }
+
+        .movie-details {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .movie-image {
+            flex: 2;
+            padding: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h2>Movie Details</h2>
-    <p>Movie ID: @Model.Id</p>
-    <p>Movie Name: @Model.Name</p>
-    <p>Rating: @Model.Rating</p>
-    <p>Release Year: @Model.ReleaseYear</p>
-    <p>Genre: @Model.Genre</p>
+
+
+    <main>
+
+        <div class="movie-details">
+            <h1>Barbie Movie Details</h1>
+            <p>Movie ID: @Model.Id</p>
+            <p>Movie Name: @Model.Name</p>
+            <p>Rating: @Model.Rating</p>
+            <p>Release Year: @Model.ReleaseYear</p>
+            <p>Genre: @Model.Genre</p>
+            <p>Movie Source: <a href="@Model.BSource" target="_blank">Watch Here</a></p>
+        </div>
+        <div class="movie-image">
+            <img src="@Model.ImageUrl" alt="Movie Poster">
+        </div>
+    </main>
 </body>
 </html>

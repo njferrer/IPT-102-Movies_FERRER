@@ -1,9 +1,8 @@
 ﻿@model List<MovieViewModel>
 
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "BARBIE MOVIES COLLECTION";
 }
-
 
 <table>
     <thead>
@@ -13,6 +12,7 @@
             <th>Rating</th>
             <th>Release Year</th>
             <th>Genre</th>
+            <th>Poster</th> <!-- Added "Image" as the header for the image column -->
         </tr>
     </thead>
     <tbody>
@@ -20,12 +20,12 @@
         {
             <tr>
                 <td>@movie.Id</td>
-                <td ><a href = "/movies/getmovie/@movie.Id" > @movie.Name </a></td>
+                <td><a href="/movies/getmovie/@movie.Id">@movie.Name</a></td>
                 <td>@movie.Rating</td>
                 <td>@movie.ReleaseYear</td>
                 <td>@movie.Genre</td>
+                <td><img src="@movie.ImageUrl" alt="@movie.Name" width="100" height="150"></td>
             </tr>
         }
     </tbody>
 </table>
-

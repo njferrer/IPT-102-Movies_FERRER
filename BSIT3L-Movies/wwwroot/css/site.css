@@ -1,4 +1,5 @@
-﻿html {
+﻿/* Original CSS */
+html {
   font-size: 14px;
 }
 
@@ -19,4 +20,61 @@ html {
 
 body {
   margin-bottom: 60px;
+}
+
+/* Barbie-themed styling */
+body {
+    background-color: #ffc0cb; /* Barbie Pink */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ff69b4; /* Hot Pink */
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 36px;
+    color: white;
+}
+
+main {
+    text-align: center;
+    padding: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ff69b4; /* Hot Pink */
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #ff69b4; /* Hot Pink */
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #fff;
+}
+
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+a {
+    text-decoration: none;
+    color: #ff69b4; /* Hot Pink */
+}
+
+a:hover {
+    text-decoration: underline;
 }
